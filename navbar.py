@@ -15,7 +15,6 @@ class NavBar(BaseDriver):
     	# If dropdown menu not open, then open it
         dropdown_elt = self.dropdown_menu_button(click = False)
         dropdown_class = dropdown_elt.get_attribute("class")
-        
         if not "openToggler" in dropdown_class: self.dropdown_menu_button() 
         
         return self.click_or_return_elt_with_id(
